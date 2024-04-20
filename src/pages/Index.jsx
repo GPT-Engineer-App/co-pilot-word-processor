@@ -51,11 +51,17 @@ const Index = () => {
         <Heading as="h1" size="xl">
           AI Word Processor
         </Heading>
-        <Textarea placeholder="Start typing here..." value={text} onChange={handleTextChange} size="lg" height="300px" />
+        <Textarea placeholder="Start typing or paste rich text here..." value={text} onChange={handleTextChange} size="lg" height="300px" style={{ fontFamily: "Times New Roman", fontSize: "16px" }} />
         <Flex width="100%" justify="space-between">
           <IconButton icon={<FaRobot />} aria-label="Generate text" onClick={generateText} colorScheme="teal" />
           <Button leftIcon={<FaSave />} colorScheme="blue" onClick={saveDocument}>
             Save
+          </Button>
+          <Button colorScheme="gray" mr={2}>
+            B
+          </Button>
+          <Button colorScheme="gray" mr={2}>
+            I
           </Button>
           <IconButton icon={<FaTrash />} aria-label="Clear text" onClick={clearDocument} colorScheme="red" />
         </Flex>
